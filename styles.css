@@ -1,0 +1,11 @@
+.il {
+    background: red;
+    display: inline;
+}
+a {
+    margin: 3rem;
+}
+.par {
+    display: flex;
+    gap: 3rem;
+}

@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    margin: 5rem;
+}
+td {
+    border: 1px solid black;
+}
+.parent {
+    display: flex;
+    gap: 20rem;
+    margin-left: 6rem;
+    margin-bottom: 5rem;
+}
+.html {
+    background-color: red;
+    width: 100px;
+    height: 30px;
+}
+.css {
+    background-color: blue;
+    width: 100px;
+    height: 30px;
+}
+.js {
+    background-color: yellow;
+    margin-left: 20rem;
+    width: 100px;
+    height: 30px;
+    margin-bottom: 5rem;
+}
+button {
+    position: fixed;
+}
