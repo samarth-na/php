@@ -68,36 +68,24 @@ while (true) {
     $json = json_encode($data, JSON_PRETTY_PRINT);
     
     // --- CREATE HTTP RESPONSE ---
-    // Build the HTTP response with proper headers
     // HTTP/1.1 200 OK - Status line indicating successful response
     $response = "HTTP/1.1 200 OK\r\n";
-    // Content-Type - Tells the client this is JSON data
     $response .= "Content-Type: application/json\r\n";
-    // Content-Length - Size of response body in bytes (required for HTTP/1.1)
     $response .= "Content-Length: " . strlen($json) . "\r\n";
-    // Connection: close - Tells client to close the connection after this response
     $response .= "Connection: close\r\n\r\n";  // Double \r\n marks end of headers
     
     // Append the JSON data after the headers
     $response .= $json;
     
     // --- SEND RESPONSE ---
-    // Write the complete HTTP response to the client socket
     socket_write($client, $response, strlen($response));
     
     // --- CLOSE CLIENT CONNECTION ---
-    // Close this specific client connection
-    // This frees up system resources
     socket_close($client);
     
     // --- LOG REQUEST ---
-    // Output a message to the server console for logging purposes
     echo "Request handled\n";
 }
 
 // --- CLEANUP ---
-// Close the main server socket
-// Note: This line will never execute in this example
-// because the while loop runs forever
-// You would need to implement a proper shutdown mechanism
 socket_close($socket);
