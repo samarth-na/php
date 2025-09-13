@@ -1,7 +1,9 @@
 <?php
 
 class MyClass
+
 {
+    
     const MY_CONST = 'value'; // A constant
 
     static $staticVar = 'static';
@@ -54,10 +56,13 @@ class MyClass
      * Destructor method
      * @return void
      */
+    
     public function __destruct(): void
     {
         print "Destroying";
+        
     }
+    
 
     /**
      * Static method example

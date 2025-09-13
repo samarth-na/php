@@ -75,6 +75,10 @@ $i = 0;
 $a = 1;
 $b = 2;
 
+$c = $a + $b;
+
+echo $c ."\n";
+
 // for ($i; $i < 23; $i++) {
 //     echo $i;
 //     echo "\n";
@@ -83,9 +87,13 @@ $b = 2;
 $list = array(1, 2, 3, 4, 5);
 
 foreach ($list as $item) {
-    echo $item;
+
     echo "\n";
+    echo $item;
+    
 }
+
+echo "\n";
 
 
 // while ($i <= 10) {
