@@ -20,5 +20,11 @@
 
       <button type="submit">convert</button>
     </form>
+    <?php
+    $browserUA = $_SERVER['HTTP_USER_AGENT'];
+    //var_dump
+    echo $browserUA;
+    var_dump($_SERVER);
+    ?>
   </body>
 </html>
